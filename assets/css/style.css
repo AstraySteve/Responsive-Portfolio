@@ -125,8 +125,8 @@ input[type=submit]{
     text-align: center;
     background-color: #777777;
     float: left;
-    /*width: 275px;
-    height: 10%;*/
+    /*width: 90%;*/
+    height: 10%;
     margin-right: 5%;
     margin-bottom: 50px;
 }
@@ -154,11 +154,8 @@ input[type=submit]{
     color: #ffffff;
     font-size: 25px;
     font-weight: bold;
-    padding: 30px 3%;
+    padding: 30px 5%;
     text-align: center;
-
-    /*Same job as "float: left" + "clear" codes*/
-    /*display: inline-block;*/
 }
 
 ul#navLinks li{
@@ -185,8 +182,6 @@ ul#navLinks li:not(:first-child):before{
 
 #bioImage{
     max-width: 100%;
-    /*float: left;*/
-    /*margin-right: 20px;*/
     padding-right: 5%;
 }
 
@@ -197,6 +192,7 @@ ul#navLinks li:not(:first-child):before{
 
 /*assignment 2 code experimental*/
 *{
+    /*turn all elements into a set total size*/
     box-sizing: border-box;
 }
 
@@ -207,42 +203,62 @@ ul#navLinks li:not(:first-child):before{
 }
 
 [class*="col-"]{
+    /*common properties for col- classes*/
     float:left;
-    /*padding: 15px;*/
+    height: auto;
 }
 
-/*expermintal code*/
 .marginSpace{
+    /*border margins on the window*/
     margin-left: 4.17%;
 }
 .navRight{
+    /*floats the nav block to the right*/
     float: right;
 }
 
+.col-1{ width: 8.33%; }
+.col-2{ width: 16.66%; }
+.col-3{ width: 25%; }
+.col-4{ width: 33.33%; }
+.col-5{ width: 41.66%; }
+.col-6{ width: 50%; }
+.col-7{ width: 58.33%; }
+.col-8{ width: 66.66%; }
+.col-9{ width: 75%; }
+.col-10{ width: 83.33%; }
+.col-11{ width: 91.66%; }
+.col-12{ width: 100%; }
+
 /*media queries*/
 @media only screen and (max-width:640px){
+    /*Landscape phone*/
     header{
         background-color: blue;
+        position: static;
+        top: 0;
     }
-    .col-1{ width: 8.33%; }
-    .col-2{ width: 16.66%; }
-    .col-3{ width: 25%; }
-    .col-4{ width: 33.33%; }
-    .col-5{ width: 41.66%; }
-    .col-6{ width: 50%; }
-    .col-7{ width: 58.33%; }
-    .col-8{ width: 66.66%; }
-    .col-9{ width: 75%; }
-    .col-10{ width: 83.33%; }
-    .col-11{ width: 91.66%; }
-    .col-12{ width: 100%; }
+    .col-xs-1{ width: 8.33%; }
+    .col-xs-2{ width: 16.66%; }
+    .col-xs-3{ width: 25%; }
+    .col-xs-4{ width: 33.33%; }
+    .col-xs-5{ width: 41.66%; }
+    .col-xs-6{ width: 50%; }
+    .col-xs-7{ width: 58.33%; }
+    .col-xs-8{ width: 66.66%; }
+    .col-xs-9{ width: 75%; }
+    .col-xs-10{ width: 83.33%; }
+    .col-xs-11{ width: 91.66%; }
+    .col-xs-12{ width: 100%; }
 
     .margin-0{
+        /*removes the margins*/
         margin-left: 0;
     }
 }
 
 @media only screen and (max-width: 768px) and (min-width: 641px){
+    /*Tablet*/
     header{
         background-color: red;
     }
@@ -261,6 +277,7 @@ ul#navLinks li:not(:first-child):before{
 }
 
 @media only screen and (max-width: 980px) and (min-width:769px){
+    /*Desktop*/
     header{
         background-color: black;
     }
