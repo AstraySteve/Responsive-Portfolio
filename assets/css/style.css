@@ -87,15 +87,16 @@ input[type=submit]{
     flex: 1;
 }
 
+/*
 .mainContent{
-    /*Properties that sets the size of the main blocks*/
+    /*Properties that sets the size of the main blocks
     width: 960px;
 
-    /*Code to center block regardless of window size*/
+    /*Code to center block regardless of window size
     position: relative;
     left: 50%;
     transform: translate(-50%);
-}
+}*/
 
 .subHeading{
     /*properties for headings that's not the Main Heading*/
@@ -124,9 +125,9 @@ input[type=submit]{
     text-align: center;
     background-color: #777777;
     float: left;
-    width: 275px;
-    height: 205px;
-    margin-right: 40px;
+    /*width: 275px;
+    height: 10%;*/
+    margin-right: 5%;
     margin-bottom: 50px;
 }
 
@@ -134,11 +135,11 @@ input[type=submit]{
     /*center text banner in front of images*/
     position: absolute;
     left: 50%;
-    bottom: 13px;
+    bottom: 10%;
     background-color: #4aaaa5;
     color: #ffffff;
     width: 100%;
-    padding: 10px 0;
+    padding: 3% 0;
 
     /*move from declared position to be centered*/
     transform: translate(-50%);
@@ -182,10 +183,11 @@ ul#navLinks li:not(:first-child):before{
     border-top: 10px solid #4aaaa5;
 }
 
-#bio-image{
-    width: 200px;
-    float: left;
-    margin-right: 20px;
+#bioImage{
+    max-width: 100%;
+    /*float: left;*/
+    /*margin-right: 20px;*/
+    padding-right: 5%;
 }
 
 /*temp CSS, REMOVE when Done
@@ -198,7 +200,7 @@ ul#navLinks li:not(:first-child):before{
     box-sizing: border-box;
 }
 
-row::after{
+.row::after{
     content:"";
     clear: both;
     display: block;
