@@ -1,6 +1,6 @@
 /*
     Steven Tran
-    Assignment 1, 2018
+    Assignment 2-2, 2018
     UofT SCS Coding Bootcamp
 */
 
@@ -87,17 +87,6 @@ input[type=submit]{
     flex: 1;
 }
 
-/*
-.mainContent{
-    /*Properties that sets the size of the main blocks
-    width: 960px;
-
-    /*Code to center block regardless of window size
-    position: relative;
-    left: 50%;
-    transform: translate(-50%);
-}*/
-
 .subHeading{
     /*properties for headings that's not the Main Heading*/
     padding: 25px 0;
@@ -114,24 +103,25 @@ input[type=submit]{
     padding: 5px 10px;
 }
 
-.portfolio-Image{
+.portfolioImage{
     /*to get images to fit in divs*/
     max-width: 100%;
     max-height: 100%;
+    object-fit: cover;
 }
-.image-Container{
+.imageContainer{
     /*div block to contain images and text*/
     position: relative;
     text-align: center;
     background-color: #777777;
     float: left;
-    /*width: 90%;*/
-    height: 10%;
+    width: 80%; /*dynamic in media queries*/
+    height: 205px;
     margin-right: 5%;
     margin-bottom: 50px;
 }
 
-.image-Text{
+.imageText{
     /*center text banner in front of images*/
     position: absolute;
     left: 50%;
@@ -185,15 +175,12 @@ ul#navLinks li:not(:first-child):before{
     padding-right: 5%;
 }
 
-/*temp CSS, REMOVE when Done
-*{
-    border: 1px solid red !important;
-}*/
-
-/*assignment 2 code experimental*/
+/*assignment 2 code*/
 *{
     /*turn all elements into a set total size*/
     box-sizing: border-box;
+
+    /*border: 1px solid red !important;*/
 }
 
 .row::after{
@@ -234,9 +221,12 @@ ul#navLinks li:not(:first-child):before{
 @media only screen and (max-width:640px){
     /*Landscape phone*/
     header{
-        background-color: blue;
         position: static;
         top: 0;
+    }
+    .imageContainer{
+        width: 100%;
+        height: auto;
     }
     .col-xs-1{ width: 8.33%; }
     .col-xs-2{ width: 16.66%; }
@@ -259,9 +249,6 @@ ul#navLinks li:not(:first-child):before{
 
 @media only screen and (max-width: 768px) and (min-width: 641px){
     /*Tablet*/
-    header{
-        background-color: red;
-    }
     .col-s-1{ width: 8.33%; }
     .col-s-2{ width: 16.66%; }
     .col-s-3{ width: 25%; }
@@ -278,8 +265,9 @@ ul#navLinks li:not(:first-child):before{
 
 @media only screen and (max-width: 980px) and (min-width:769px){
     /*Desktop*/
-    header{
-        background-color: black;
+
+    .imageContainer{
+        width: 90%;
     }
     .col-m-1{ width: 8.33%; }
     .col-m-2{ width: 16.66%; }
